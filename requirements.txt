@@ -14,3 +14,4 @@ requests>=2.32.3
 textract>=1.6.5
 watchdog>=3.0.0
 networkx
+pandas>=2.1.0
