@@ -1215,7 +1215,7 @@ def main():
             st.session_state.messages = []
             st.rerun()
 
-    st.title("HBS Help Chatbot")
+    st.title("HBS AI HelpDesk")
 
     if not st.session_state.messages:
         st.info("Hi! How can I help you today?")
