@@ -1131,7 +1131,7 @@ def summarize_sources(chunks: List[Dict]) -> List[Dict]:
 # --- main --------------------------------------------------------------------
 
 def main():
-    st.set_page_config(page_title="HBS Help Chatbot", page_icon="🤖", layout="wide")
+    st.set_page_config(page_title="HBS AI HelpDesk", page_icon="🤖", layout="wide")
 
     defaults = {
         "messages": [],
@@ -1186,7 +1186,7 @@ def main():
         st.session_state.polling_started = True
 
     with st.sidebar:
-        st.header("HBS Help Chatbot")
+        st.header("HBS AI HelpDesk")
         st.subheader("Model Settings")
         current_index = CANDIDATE_MODELS.index(st.session_state.model_name) if st.session_state.model_name in CANDIDATE_MODELS else 0
         st.session_state.model_name = st.selectbox(
