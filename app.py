@@ -36,6 +36,7 @@ KB_DIR.mkdir(parents=True, exist_ok=True)
 EXTRACT_DIR.mkdir(parents=True, exist_ok=True)
 
 CANDIDATE_MODELS = ["gemini-2.5-flash-lite", "gemini-2.5-flash", "gemini-2.5-pro"]
+
 DEFAULT_LOCATION = "us-central1"
 
 MAX_CONTEXT_TOKENS = 150_000
@@ -430,7 +431,7 @@ Be specific about different procedures, documents, screens, processes, or relate
 """
         response = model.generate_content(
             prompt,
-            generation_config=GenerationConfig(temperature=0.6, max_output_tokens=400),
+            generation_config=GenerationConfig(temperature=0.1, max_output_tokens=400),
         )
         
         if response.text:
@@ -453,7 +454,7 @@ Return ONLY a JSON array of strings.
 """
         response = model.generate_content(
             prompt,
-            generation_config=GenerationConfig(temperature=0.5, max_output_tokens=200),
+            generation_config=GenerationConfig(temperature=0.1, max_output_tokens=200),
         )
         if response.text:
             variations = json.loads(response.text.strip())
@@ -728,7 +729,6 @@ Consider: direct relevance, completeness of information, and whether it compleme
             prompt,
             generation_config=GenerationConfig(temperature=0.1, max_output_tokens=500),
         )
-
         if response.text:
             # Try to extract JSON array from response
             response_text = response.text.strip()
