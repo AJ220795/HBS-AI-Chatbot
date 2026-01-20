@@ -35,7 +35,7 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 KB_DIR.mkdir(parents=True, exist_ok=True)
 EXTRACT_DIR.mkdir(parents=True, exist_ok=True)
 
-CANDIDATE_MODELS = ["gemini-2.5-flash-lite", "gemini-2.5-flash", "gemini-2.5-pro", "gemini-3.0-flash-preview-001"]
+CANDIDATE_MODELS = ["gemini-2.5-flash-lite", "gemini-2.5-flash", "gemini-2.5-pro", "gemini-3-flash-preview"]
 DEFAULT_LOCATION = "us-central1"
 
 MAX_CONTEXT_TOKENS = 150_000
@@ -48,9 +48,9 @@ REQUIRED_UNIQUE_SOURCES = 3  # Reduced from 6 to 3, max sources is 3
 
 MODEL_CONTEXT_LIMITS = {
     "gemini-2.5-flash-lite": 1_000_000,
-    "gemini-2.5-flash": 1_500_000,
-    "gemini-2.5-pro": 2_000_000,
-    "gemini-3.0-flash-preview-001": 2_000_000,
+    "gemini-2.5-flash": 1_000_000,
+    "gemini-2.5-pro": 1_000_000,
+    "gemini-3-flash-preview": 1_000_000,
 }
 
 DEEP_RETRIEVAL_KEYWORDS = [
