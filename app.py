@@ -1288,7 +1288,7 @@ def main():
         "creds": None,
         "project_id": None,
         "location": None,
-        "model_name": CANDIDATE_MODELS[0],
+        "model_name": CANDIDATE_MODELS[1],
         "kb_loaded": False,
         "kb_loading": False,
         "escalation_requests": [],
